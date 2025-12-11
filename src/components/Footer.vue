@@ -1,22 +1,30 @@
+<script setup>
+</script>
 <template>
-    <footer class='bg-dark text-white text-center py-4 mt-5'>
+    <footer class="bg-info text-white py-5 mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 bg-light">
-                    <p class="text-dark">Col-1</p>
+                <div class="col-md-4">
+                    <h5>FPoly Shop</h5>
+                    <p>Được thực hiện bởi sinh viên FPT Polytechnic Cần Thơ</p>
                 </div>
-                <div class="col-lg-3 col-md-6 bg-light">
-                    <p class="text-dark">Col-2</p>
+                <div class="col-md-4">
+                    <h5>Liên kết</h5>
+                    <ul class="list-unstyled">
+                        <li><router-link to="/" class="text-white">Trang chủ</router-link></li>
+                        <li><router-link to="/product" class="text-white">Sản phẩm</router-link></li>
+                        <li><router-link to="/contact" class="text-white">Liên hệ</router-link></li>
+                    </ul>
                 </div>
-                <div class="col-lg-3 col-md-6 bg-light">
-                    <p class="text-dark">Col-3</p>
-                </div>
-                <div class="col-lg-3 col-md-6 bg-light">
-                    <p class="text-dark">Col-4</p>
+                <div class="col-md-4">
+                    <h5>Liên hệ</h5>
+                    <p>Email: hotro@fpolyshop.vn<br>Điện thoại: 0909 123 456</p>
                 </div>
             </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2025 FPoly Shop. All rights reserved.</p>
         </div>
-        <p>copyright © 2025 - All Shop Xum</p>
     </footer>
 </template>
 
+<style scoped></style>

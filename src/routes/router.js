@@ -1,44 +1,70 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router'
 
-// Admin pages
-import AdminLayout from "../pages/admin/AdminLayout.vue";
-import Dashbroad from "../pages/admin/Dashbroad.vue";
-import Products from "../pages/admin/Products.vue";
-import ProductAdd from "../pages/admin/ProductAdd.vue";
-import ProductEdit from "../pages/admin/ProductEdit.vue";
+// Client
+import DefaulLayout from '../Views/Client/DefaulLayout.vue'
+import HomeView from '../Views/Client/HomeView.vue'
+import ProductListView from '../Views/Client/ProductListView.vue'
+import ProductDetailView from '../Views/Client/ProductDetailView.vue'
+import ContactView from '../Views/Client/ContactView.vue'
+import CartView from '../Views/Client/CartView.vue'
+import LoginView from '../Views/Client/LoginView.vue'
+import RegisterView from '../Views/Client/RegisterView.vue'
 
-// Client pages
-import DefaultLayout from "../pages/client/DefautLayout.vue";
-import Home from "../pages/client/Home.vue";
-import Product from "../pages/client/Product.vue";
+// Admin
+import Dashboard from '../Views/Admin/Dashboard.vue'
+import HomeAdmin from '../Views/Admin/Home/HomeAdmin.vue'
+
+// Product Admin
+import ProductIndex from "../Views/Admin/Products/ProductIndex.vue";
+import ProductAdd from "../Views/Admin/Products/ProductAdd.vue";
+import ProductEdit from "../Views/Admin/Products/ProductEdit.vue";
+import ProductInfo from "../Views/Admin/Products/ProductInfo.vue";
+
+// User Admin
+import UserIndex from "../Views/Admin/User/UserIndex.vue";
+import UserAdd from "../Views/Admin/User/UserAdd.vue";
+import UserInfo from "../Views/Admin/User/UserInfo.vue";
+import UserEdit from "../Views/Admin/User/UserEdit.vue";
 
 const routes = [
-  // CLIENT
-  {
-    path: "/",
-    component: DefaultLayout,
-    children: [
-      { path: "", component: Home },
-      { path: "product", component: Product },
-    ],
-  },
+    {
+        path: '/',
+        component: DefaulLayout,
+        children: [
+            { path: '/', component: HomeView },
+            { path: '/detail/:id', name:'detail', component: ProductDetailView },
+            { path: '/contact', component: ContactView },
+            { path: '/product', component: ProductListView },
+            { path: '/cart', component: CartView },
+            { path: '/register', component: RegisterView },
+        ]
+    },
+    {
+        path: '/login',
+        name: 'login',
+        component: LoginView,
+    },
+    {
+        path: '/admin',
+        component: Dashboard,
+        children: [
+            { path: '/admin', component: HomeAdmin },
+            // Product
+            { path: '/productAdmin', name: 'ProductIndex', component: ProductIndex },
+            { path: '/productEdit/:id', name: 'ProductEdit', component: ProductEdit },
+            { path: '/productAdd', name: 'ProductAdd', component: ProductAdd },
+            { path: '/productInfo/:id', name: 'ProductInfo', component: ProductInfo },
 
-  // ADMIN
-  {
-    path: "/admin",
-    component: AdminLayout,
-    children: [
-      { path: "", component: Dashbroad },
-      { path: "products", component: Products },
-      { path: "products/add", component: ProductAdd },
-      { path: "products/edit/:id", component: ProductEdit, props: true },
-    ],
-  },
-];
+            // User
+            { path: '/user', name: 'UserIndex', component: UserIndex },
+            { path: '/userEdit/:id', name: 'UserEdit', component: UserEdit },
+            { path: '/userAdd', name:'UserAdd', component: UserAdd },
+            { path: '/userInfo/:id', name: 'UserInfo', component: UserInfo },
+        ]
+    }
+]
 
-const router = createRouter({
-  history: createWebHistory(),
-  routes,
-});
-
-export default router;
+export const router = createRouter({
+    history: createWebHistory(),
+    routes,
+})

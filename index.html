@@ -4,7 +4,30 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>asm</title>
+    <title>asm1</title>
+    <style>
+            /* Đảm bảo ảnh sản phẩm luôn vuông và cố định kích thước */
+            .product-img-fixed {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                /* hoặc object-fit: contain; tùy bạn */
+                background-color: #f8f9fa;
+            }
+
+            .product-card {
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+
+            .product-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .rating-star {
+                color: #ffc107;
+            }
+        </style>
   </head>
   <body>
     <div id="app"></div>

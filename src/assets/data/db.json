@@ -1,0 +1,97 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Casio G-Shock GA-2100-1A1 'CasiOak'",
+      "description": "Đồng hồ chống shock huyền thoại, thiết kế tối giản octagon, siêu mỏng chỉ 11.8mm, cực bền và hợp streetwear.",
+      "price": "2850000",
+      "stock": 45,
+      "thumbnail": "watch_id1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Seiko 5 Sports SRPD55K1",
+      "description": "Automatic Nhật Bản kinh điển, mặt đen, dây NATO, size 42.5mm – lựa chọn hoàn hảo cho người mới chơi Seiko 5.",
+      "price": "6200000",
+      "stock": 28,
+      "thumbnail": "watch_id2.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Orient Bambino Gen 2 FAC00009N",
+      "description": "Dress watch cổ điển, máy automatic in-house, kính dome sang trọng, mặt trắng ngà cực đẹp.",
+      "price": "4200000",
+      "stock": 36,
+      "thumbnail": "watch_id3.png"
+    },
+    {
+      "id": "4",
+      "name": "Citizen Eco-Drive BM8180-03E",
+      "description": "Năng lượng ánh sáng, dây vải NATO xanh quân đội, phong cách field watch đơn giản mà chất.",
+      "price": "4800000",
+      "stock": 62,
+      "thumbnail": "watch_id4.jpg"
+    },
+    
+  ],
+  "users": [
+    {
+      "name": "Công Xum",
+      "email": "hcx020703@gmail.com",
+      "is_admin": "0",
+      "avatar": "person_1.jpg",
+      "id": "9153",
+      "password": "111111"
+    }
+  ],
+  "carts": [
+    {
+      "id": "2",
+      "name": "Seiko 5 Sports SRPD55K1",
+      "price": "6200000",
+      "quantity": 1,
+      "image": "watch_id2.jpg"
+    },
+    {
+      "id": "1",
+      "name": "Casio G-Shock GA-2100-1A1 'CasiOak'",
+      "price": "2850000",
+      "quantity": 1,
+      "image": "watch_id1.jpg"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Sport Watch"
+    },
+    {
+      "id": "2",
+      "name": "Dress Watch"
+    },
+    {
+      "id": "3",
+      "name": "Diver Watch"
+    },
+    {
+      "id": "4",
+      "name": "Pilot / Aviation"
+    },
+    {
+      "id": "5",
+      "name": "Field Watch"
+    },
+    {
+      "id": "6",
+      "name": "Chronograph"
+    },
+    {
+      "id": "7",
+      "name": "Digital Watch"
+    },
+    {
+      "id": "8",
+      "name": "Luxury & Swiss"
+    }
+  ]
+}
